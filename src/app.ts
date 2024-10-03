@@ -40,7 +40,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (_req: Request, res: Response) => {
-  res.send('Sample Server');
+  res.send('Server Running');
 });
 
 /**

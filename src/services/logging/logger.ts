@@ -21,18 +21,18 @@ export interface Logger {
   debug: (message: string) => void;
 }
 
-export class SampleServerLogger implements Logger {
+export class ServerLogger implements Logger {
   info(message: string) {
-    console.log('[SampleServerLogger]: ' + message);
+    console.log('[ServerLogger]: ' + message);
   }
   warn(message: string) {
-    console.log('[SampleServerLogger]: ' + message);
+    console.log('[ServerLogger]: ' + message);
   }
   error(message: string) {
-    console.log('[SampleServerLogger]: ' + message);
+    console.log('[ServerLogger]: ' + message);
   }
   debug(message: string) {
-    console.log('[SampleServerLogger]: ' + message);
+    console.log('[ServerLogger]: ' + message);
   }
 }
 

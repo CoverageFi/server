@@ -17,10 +17,7 @@
 import { signUpCallback, signInCallback } from '../onboarding';
 import { getMockReq, getMockRes } from '@jest-mock/express';
 import { hashSync } from 'bcrypt';
-import {
-  registerLogger,
-  SampleServerLogger
-} from '../../services/logging/logger';
+import { registerLogger, ServerLogger } from '../../services/logging/logger';
 
 jest.mock('../../services', () => ({
   circleUserSdk: {
@@ -63,7 +60,7 @@ jest.mock('../../services', () => ({
   }
 }));
 
-registerLogger(new SampleServerLogger());
+registerLogger(new ServerLogger());
 const hashedPassword = hashSync('123', 10);
 
 const user = {
